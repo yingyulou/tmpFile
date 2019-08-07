@@ -21,11 +21,11 @@ with tmpFile() as tmpFileName, open(tmpFileName, 'w') as fo:
 
 ### Argument
 
-1. ext = '', str
+#### 1. ext = '', str
 
 The extension of the tempfile.
 
-2. path = './', str
+#### 2. path = './', str
 
 The path of the tempfile.
 
@@ -48,6 +48,6 @@ with tmpFolder() as tmpFolderPath:
 
 ### Argument
 
-1. path = './', str
+#### 1. path = './', str
 
 The path of the tmp folder.
