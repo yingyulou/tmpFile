@@ -1,46 +1,49 @@
 # tmpFile
+
 A module for creating temporary files and folders.
 
-* tmpFile
+## tmpFile
 
-DESCRIPTION
+Create a tmp file.
 
-    Create a tmp file.
+- Usage
 
-USAGE
+``` Python
+from tmpFile import tmpFile
 
-    from tmpFile import tmpFile
+with tmpFile() as tmpFileName, open(tmpFileName, 'w') as fo:
+    ...
 
-    with tmpFile() as tmpFileName, open(tmpFileName, 'w') as fo:
-        ...
+# File: "tmpFileName" will be deleted automatically (if exist)
+```
 
-    # File: "tmpFileName" will be deleted automatically (if exist)
+- Argument
 
-ARGUMENT
+1. ext = '', str
 
-    * ext = '', str
-        The extension of the tempfile.
+The extension of the tempfile.
 
-    * path = './', str
-        The path of the tempfile.
+2. path = './', str
 
+The path of the tempfile.
 
-* tmpFolder
+## tmpFolder
 
-DESCRIPTION
+Create a tmp folder.
 
-    Create a tmp folder.
+- Usage
 
-USAGE
+``` Python
+from tmpFile import tmpFolder
 
-    from tmpFile import tmpFolder
+with tmpFolder() as tmpFolderPath:
+    ...
 
-    with tmpFolder() as tmpFolderPath:
-        ...
+# Folder: "tmpFolderPath" will be deleted automatically (if exist)
+```
 
-    # Folder: "tmpFolderPath" will be deleted automatically (if exist)
+Argument
 
-ARGUMENT
+1. path = './', str
 
-    * path = './', str
-        The path of the tmp folder.
+The path of the tmp folder.
