@@ -13,8 +13,9 @@ Create a tmp file.
 ``` Python
 from tmpFile import tmpFile
 
-with tmpFile() as tmpFileName, open(tmpFileName, 'w') as fo:
-    ...
+with tmpFile() as tmpFileName:
+    with open(tmpFileName, 'w') as fo:
+        ...
 
 # File: "tmpFileName" will be deleted automatically (if exist)
 ```
